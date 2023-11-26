@@ -620,7 +620,7 @@ GameObject:
   - component: {fileID: 157549626}
   m_Layer: 5
   m_Name: Touch_marker
-  m_TagString: Untagged
+  m_TagString: Joystick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -642,8 +642,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: -0.27999878, y: -0.30000305}
+  m_SizeDelta: {x: 134.724, y: 129.38202}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &157549626
 MonoBehaviour:
@@ -785,10 +785,10 @@ GameObject:
   - component: {fileID: 191974815}
   - component: {fileID: 191974818}
   - component: {fileID: 191974817}
-  - component: {fileID: 191974816}
+  - component: {fileID: 191974819}
   m_Layer: 5
   m_Name: testJoystic
-  m_TagString: Untagged
+  m_TagString: Joystick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -800,35 +800,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 191974814}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 157549625}
   m_Father: {fileID: 1629827362}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 225.268, y: 197}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -343.00006}
+  m_SizeDelta: {x: 291.443, y: 265.40503}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &191974816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 191974814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8605265295b0a9140abe80c70e461651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _touchMarker: {fileID: 157549624}
-  _targetVector: {x: 0, y: 0, z: 0}
-  _movedController: {fileID: 971054164}
 --- !u!114 &191974817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -867,6 +852,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 191974814}
   m_CullTransparentMesh: 1
+--- !u!114 &191974819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191974814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6a3ac3b20852943ad4928768f516bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joystik: {fileID: 157549626}
 --- !u!1 &230559257
 GameObject:
   m_ObjectHideFlags: 0
@@ -2361,22 +2359,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc4a5c1b1333374697968dceb098188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystikArea: {fileID: 1629827363}
-  joystikBackground: {fileID: 191974817}
-  joystik: {fileID: 157549626}
-  joystikBackgroundStartPosition: {x: 0, y: 0}
-  inputvVector: {x: 0, y: 0}
-  inActiveJoystickColor:
-    r: 0.08199072
-    g: 0.3207547
-    b: 0.074136704
-    a: 0
-  activeJoystickColor:
-    r: 0
-    g: 0.764151
-    b: 0.10187067
-    a: 0
-  isActiveJoistick: 0
 --- !u!1 &995329255
 GameObject:
   m_ObjectHideFlags: 0
@@ -2411,11 +2393,11 @@ RectTransform:
   - {fileID: 1828175808}
   - {fileID: 82936301}
   m_Father: {fileID: 1629827362}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 291.34003, y: -76}
+  m_AnchoredPosition: {x: 292.34003, y: -76}
   m_SizeDelta: {x: 433.1239, y: 54.140503}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &995329257
@@ -3689,16 +3671,16 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 995329256}
   - {fileID: 191974815}
+  - {fileID: 995329256}
   m_Father: {fileID: 29264870}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 308.50983, y: 0}
+  m_AnchoredPosition: {x: 308.5099, y: -0.000061035156}
   m_SizeDelta: {x: 617.0194, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.18676138}
 --- !u!114 &1629827363
 MonoBehaviour:
   m_ObjectHideFlags: 0
