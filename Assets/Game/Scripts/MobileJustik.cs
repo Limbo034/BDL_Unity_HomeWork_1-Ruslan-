@@ -28,14 +28,17 @@ public class MobileJustik : MonoBehaviour,IDragHandler,IPointerUpHandler,IPointe
 
   public virtual void OnDrag(PointerEventData ped)
   {
+		
   	Vector2 pos;
 		if(RectTransformUtility.ScreenPointToLocalPointInRectangle(joystikBG.rectTransform,ped.position,ped.pressEventCamera, out pos))
 		{
 			pos.x = (pos.x / joystikBG.rectTransform.sizeDelta.x);
-			pos.y = (pos.y / joystikBG.rectTransform.sizeDelta.x);
+			pos.y = (pos.y / joystikBG.rectTransform.sizeDelta.y); 
 
-			inputVector = new Vector2(pos.x *2-1,pos.y *2-1);
+			inputVector = new Vector2(pos.x,pos.y);
 			inputVector=(inputVector.magnitude > 1.0f) ? inputVector.normalized : inputVector;
+			Debug.Log(inputVector.x);
+			Debug.Log(inputVector.y);
 
 			joystik.rectTransform.anchoredPosition = new Vector2(inputVector.x*(joystikBG.rectTransform.sizeDelta.x/2), inputVector.y*(joystikBG.rectTransform.sizeDelta.y/2));
 		}
